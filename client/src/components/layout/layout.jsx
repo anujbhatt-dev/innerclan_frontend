@@ -390,11 +390,7 @@ import CustomDesign from "./custom-design/custom-design"
            <Whatsapp/>
            <GoTOTop />
            <Switch>
-               <Route exact path="/">
-                   <Cart clicked={this.modalToggleHandler} cart={this.state.cart} count={this.state.cart.length}/>
-                   <Profile authenticated={this.props.authenticated} clicked={this.modalProfileHandler}/>
-                   <Main cart={this.state.cart} cartHandler={this.cartHandler} />
-               </Route>
+              
                <Route exact path="/whoAreWe" component={WhoAreWe}/>
                <Route exact path="/showcase">
                     <SecondaryNavigation/>
@@ -415,6 +411,11 @@ import CustomDesign from "./custom-design/custom-design"
                <Route exact path="/myOrders">
                     <SecondaryNavigation/>
                     <MyOrders setAuthorizationHeader={this.props.setAuthorizationHeader} authenticated={this.props.authenticated} />
+               </Route>
+               <Route  path="/">
+                   <Cart clicked={this.modalToggleHandler} cart={this.state.cart} count={this.state.cart.length}/>
+                   <Profile authenticated={this.props.authenticated} clicked={this.modalProfileHandler}/>
+                   <Main cart={this.state.cart} cartHandler={this.cartHandler} />
                </Route>
            </Switch>
            <Footer/>

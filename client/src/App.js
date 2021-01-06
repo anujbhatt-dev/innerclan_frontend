@@ -57,6 +57,7 @@ componentDidUpdate(){
 componentDidMount=()=>{
 
 
+
   if(this.getCookie("jwt")!==null)
   {
     axios.defaults.headers.common['authorization'] = this.getCookie("jwt");

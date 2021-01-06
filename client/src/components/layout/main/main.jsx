@@ -2,6 +2,7 @@ import React, {Component} from "react"
 import Navigation from "./navigation/navigation"
 import BigImage from "./big-image/big-image"
 import Products from "./products/products"
+import { withRouter } from "react-router-dom"
 
 
 class Main extends Component{
@@ -16,12 +17,24 @@ class Main extends Component{
       gender:""
     },
     sortBy:"sOrderByDate"
-
   }
 
   // componentDidUpdate=()=>{
   //
   // }
+
+  componentDidMount=()=>{
+    if(this.props.location.pathname==="/collection"){
+          document.getElementById("heading").scrollIntoView();
+  }
+
+  }
+
+  componentDidUpdate=()=>{
+    if(this.props.location.pathname==="/collection"){
+      document.getElementById("heading").scrollIntoView();
+}
+  }
 
    selectedCategoryHandler=(selectedCategory)=>{
        this.setState({
@@ -108,4 +121,4 @@ class Main extends Component{
 }
 
 
-export default Main;
+export default withRouter(Main);
