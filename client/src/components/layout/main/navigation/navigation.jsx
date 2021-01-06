@@ -1,5 +1,4 @@
  import React, {Component} from "react"
-import logo from "../../../../assets/images/innerclan_page-0001.jpg"
 import axios from "axios"
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -99,7 +98,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
      return (
        <nav className="nav">
-          <img onClick={this.imageClickHandler} className="nav__image" src={logo} alt="logo"/>
+
           <div className="nav__list">
               {men}
               {women}

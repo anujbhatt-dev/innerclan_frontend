@@ -2,15 +2,16 @@
    padding: 0rem 2rem;
    z-index: 100;
    display: flex;
+   justify-content: center;
    background: $color-white;
-   position: sticky;
+   position: relative;
    top: 0;
   &__list{
     position: relative;
     // left: -4rem;
     flex-grow: 1;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
    &--item{
      user-select: none;
@@ -40,8 +41,8 @@
   &__image{
      position: relative;
      // top:-2rem;
-     height: 6rem;
-     width: 20rem;
+     height: 5rem;
+     // width: 15rem;
      margin:  .5rem;
      cursor: pointer;
   }
