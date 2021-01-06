@@ -1,0 +1,55 @@
+.myOrders{
+  min-height: 90vh;
+  margin: 0 10rem;
+  position: relative;
+  &__box{
+
+
+    background: rgba($color-primary-blue,.1);
+    border: 1px solid rgba($color-black,.02);
+    margin: 1rem;
+    box-shadow: 0rem 0rem 1rem rgba($color-black,.1);
+    margin-bottom: 3rem;
+    padding: 1rem;
+    &--address{
+      display: inline-block;
+      // height: 50rem;
+      padding: 0 3rem;
+      // margin-top: .1rem;
+      &-item{
+         text-align:right;
+      }
+      &-head{
+         margin-bottom: .5rem;
+      }
+    }
+    &--hr{
+      border: none;
+      border-bottom: 1px solid rgba($color-black,.2);
+      width: 60%;
+      margin: auto;
+      margin-top: .3rem;
+      margin-bottom: .5rem;
+    }
+    &--orderId{
+      margin-right:2rem;
+      display: inline-block;
+      font-size: 1.2rem;
+       & span{
+         font-weight: bolder;
+       }
+    }
+//
+//
+//
+  }
+  @include respond(tab-port){
+    margin: 0 3rem;
+  }
+}
+#btn__id{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:15rem;
+}

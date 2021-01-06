@@ -1,0 +1,221 @@
+.checkout{
+  display: flex;
+  position: relative;
+  &__details{
+    display: flex;
+    flex-grow: 1;
+    flex-basis: 50%;
+    justify-content: center;
+    // align-items: center;
+    margin-top: 3rem;
+  }
+  &__form{
+    display: flex;
+    // flex-flow: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 80%;
+    margin: 5rem;
+    &--input{
+      height: 5rem;
+      width:30rem;
+      font-size: 1.5rem;
+      // border-right: none;
+      padding: 0 1rem;
+      margin-bottom: 1rem;
+      border: 1px solid $color-black;
+      &:focus{
+        outline: none;
+      }
+    }
+    &--location{
+      flex-basis: 100%;
+    }
+    &--btn{
+      display: inline-block;
+      font-size: 1.5rem;
+      height: 5rem;
+      width:10rem;
+      background: $color-black;
+      color:$color-white;
+      transition: all .2s;
+      padding: .5rem 2rem;
+      border: none;
+      cursor: pointer;
+      border: 1px solid $color-black;
+      &:hover{
+        background: $color-white;
+        color:$color-black;
+        border: 1px solid $color-black;
+      }
+    }
+  }
+  &__product{
+
+    max-height: 100vh;
+    overflow-y: auto;
+    // display: flex;
+    flex-flow: column;
+    // align-self: flex-start;
+    background: $color-grey-light-3;
+    flex-grow: 1;
+    flex-basis: 50%;
+    border-left: 1px solid rgba($color-black,.3);
+    &--box{
+      display: flex;
+      padding: 2rem 1rem;
+      margin:.2rem;
+      &-item{
+        padding: 0.5rem 1.2rem;
+      }
+      &-col1{
+        flex-grow: 1;
+      }
+      &-img{
+        height: 15rem;
+        width: 13rem;
+      }
+    }
+  }
+
+  &__h5{
+    order: 1;
+    text-align: right;
+    font-size: 1rem;
+    & span{
+      font-size: 1.5rem;
+      font-weight: bolder;
+      margin: 0 1.5rem;
+    }
+    display: none;
+  }
+  &__hr{
+    border: none;
+    border-bottom: 1px solid rgba($color-black,.1);
+    margin: 3rem auto;
+    width: 80%;
+    text-align: center;
+  }
+  &__coupon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    &--form{
+
+      &-input{
+        height: 5rem;
+        width:30rem;
+        font-size: 1.5rem;
+        // border-right: none;
+        padding: 0 1rem;
+        margin-bottom: 2rem;
+        border: 1px solid $color-black;
+        &:focus{
+          outline: none;
+        }
+      }
+      &-text{
+        font-size: 1.5rem;
+        padding: 0 1rem;
+        margin-bottom: 6rem;
+      }
+      &-btn{
+        font-size: 1.5rem;
+        height: 5rem;
+        width:10rem;
+        background: $color-black;
+        color:$color-white;
+        transition: all .2s;
+        padding: .5rem 2rem;
+        border: none;
+        cursor: pointer;
+        border: 1px solid $color-black;
+        &:hover{
+          background: $color-white;
+          color:$color-black;
+          border: 1px solid $color-black;
+        }
+        &:focus{
+          outline: none;
+        }
+      }
+    }
+  }
+  &__h5Desktop{
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    padding:.5rem 1rem;
+    order: 1;
+    text-align: right;
+    font-size: 1rem;
+    &--tax{
+      font-size: .5rem;
+
+    }
+    & div{
+      display: flex;
+      justify-content: space-between;
+      color: rgba($color-black,.7);
+    }
+    & span{
+      font-size: 1.2rem;
+      font-weight: bolder;
+      margin: 0 0rem;
+    }
+  }
+}
+@include respond(phone){
+  .checkout{
+    flex-flow: column;
+    &__details{
+
+    }
+    &__product{
+      order: -1;
+      height: 0;
+      display: none;
+      opacity: 0;
+      transition: all .5s;
+      &:hover{
+         height: auto;
+         opacity: 1;
+         display: flex;
+      }
+    }
+    &__h5Desktop{
+        display: none;
+    }
+    &__h5{
+      display: block;
+      background: $color-grey-dark-2;
+      order: -1;
+      padding:2rem 1rem;
+      backface-visibility: hidden;
+      position: relative;
+      &:hover + .checkout__product{
+         height: auto;
+         opacity: 1;
+         display: flex;
+      }
+      &::before{
+        position: absolute;
+        content: "\2193";
+        font-size: 3rem;
+        font-weight: bolder;
+        margin-left: 2rem;
+        left: 0;
+        bottom: 1rem;
+      }
+    }
+  }
+}
+@keyframes arrow {
+  from{
+    transform: translateY(5px);
+  }
+  to{
+    transform: translateY(0px);
+  }
+}

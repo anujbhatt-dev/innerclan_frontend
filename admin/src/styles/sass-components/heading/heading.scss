@@ -1,0 +1,17 @@
+.heading{
+   padding: 3rem;
+   display: flex;
+   justify-content: center;
+  &__span{
+    padding: .5rem 2rem;
+    font-size: 4rem;
+    font-weight: bold;
+    letter-spacing: 5px;
+    color: $color-black;
+
+    @include respond(phone){
+      font-size: 3rem;
+      padding: 1rem;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.sort{
+  display: flex;
+  justify-content: space-between;
+  margin: 0 25rem;
+  align-items: center;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  color: $color-black;
+  @include respond(tab-port){
+    margin: 0 5rem;
+  }
+  @include respond(phone){
+
+  }
+
+  &__productCount{
+    margin-right: 2rem;
+  }
+}

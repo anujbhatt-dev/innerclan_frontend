@@ -1,0 +1,74 @@
+.subscribe{
+  overflow: hidden;
+  height: 70vh;
+  display: flex;
+  flex-flow:column;
+  justify-content: center;
+  align-items: center;
+  background: $color-grey-light-3;
+  color:$color-black;
+  &__head{
+    letter-spacing: 2px;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  &__subHead{
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    font-weight: lighter;
+  }
+  &__form{
+    &--input{
+      height: 5rem;
+      width:50rem;
+      font-size: 1.5rem;
+      // border-right: none;
+      padding: 0 1rem;
+      border: 1px solid $color-black;
+      &:focus{
+        outline: none;
+      }
+    }
+    &--btn{
+      font-size: 1.5rem;
+      height: 5rem;
+      width:10rem;
+      background: $color-black;
+      color:$color-white;
+      transition: all .2s;
+      padding: .5rem 2rem;
+      border: none;
+      cursor: pointer;
+      // border: 1px solid $color-black;
+      &:hover{
+        background: $color-grey-dark-3;
+        // color:$color-black;
+        // border: 1px solid $color-black;
+      }
+      &:focus{
+        outline: none;
+      }
+    }
+  }
+}
+
+@include respond(phone){
+  .subscribe{
+    &__head{
+      font-size: 1.5rem;
+    }
+    &__subHead{
+      font-size: 1rem;
+    }
+    &__form{
+      &--input{
+       width: 30rem
+      }
+      &--btn{
+      // width: 5rem;
+      }
+    }
+  }
+}

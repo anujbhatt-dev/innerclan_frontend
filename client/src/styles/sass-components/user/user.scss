@@ -1,0 +1,134 @@
+.user{
+  color: $color-black;
+  text-align: center;
+  &__input{
+    text-align: center;
+    padding: 1rem 2rem;
+    color: $color-black;
+    display: block;
+    border: none;
+    width: 30rem;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    background: $color-grey-light-2;
+    &::placeholder{
+      // color:$color-black;
+    }
+    &:focus{
+      outline: none;
+    }
+  }
+  &__register{
+    // border: 1px solid $color-black;
+    margin-bottom: 1rem;
+    padding: 2rem;
+    background: rgba($color-white,1);
+    & h3{
+      margin-bottom: 1rem;
+    }
+    &--btn{
+      // letter-spacing: 2px;
+      cursor: pointer;
+      width:30rem;
+      padding: 1rem;
+      border: none;
+      color: $color-white;
+      font-size: 1.4rem;
+      transition: all .3s;
+      background: $color-Spring-green;
+      &:focus{
+        outline: none;
+        transform: translateY(-1.5px);
+        box-shadow: 0 .5rem 2rem rgba($color-black,.2);
+      }
+      &:hover{
+        transform: translateY(-3px);
+        box-shadow: 0 1rem 2rem rgba($color-black,.2);
+      }
+    }
+  }
+  &__login{
+    background: rgba($color-white,1);
+    padding: 2rem;
+    padding-bottom: 1rem;
+    // border: 1px solid $color-black;
+    margin-bottom: 1rem;
+    position: relative;
+    & h3{
+      margin-bottom: 1rem;
+    }
+    &--btn{
+      color: $color-white;
+      font-size: 1.4rem;
+      transition: all .3s;
+      background: $color-primary-blue;
+      cursor: pointer;
+      // letter-spacing: 2px;
+      width:30rem;
+      padding: 1rem;
+      border: none;
+      &:focus{
+        outline: none;
+        transform: translateY(-1.5px);
+        box-shadow: 0 .5rem 2rem rgba($color-black,.2);
+      }
+      &:hover{
+        transform: translateY(-3px);
+        box-shadow: 0 1rem 2rem rgba($color-black,.2);
+      }
+    }
+    &--forgotPassword{
+      color: $color-primary-blue;
+      font-size: 1.2rem;
+      cursor: pointer;
+      margin-top: 1rem;
+
+    }
+  }
+  & hr{
+    border: none;
+    border-bottom: 3px dotted  rgba($color-white,.9);
+    margin: 1rem auto;
+    width: 10%;
+
+  }
+  &__google{
+    // border-top-left-radius: 18px;
+    // border-top-right-radius:18px;
+    letter-spacing: 1px;
+    text-align: center;
+    display: inline-block;
+    padding: 1rem;
+    font-size: 1.5rem;
+    margin: 1rem auto;
+    cursor: pointer;
+    width: 100%;
+    height: 4rem;
+    background: $color-red;
+    color: $color-white;
+    transition: all .3s;
+    border: none;
+    text-decoration: none;
+    &:hover{
+      background: $color-white;
+      color: $color-black;
+      text-decoration: none;
+    }
+    &:focus{
+      color: $color-black;
+      outline: none;
+    }
+  }
+  &__nodal{
+    background: $color-black;
+  }
+}
+.flex{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  & input{
+    width: 14.5rem;
+  }
+}

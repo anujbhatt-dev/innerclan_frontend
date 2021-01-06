@@ -1,0 +1,33 @@
+.goToTop{
+  cursor: pointer;
+  z-index: 500;
+  position: fixed;
+  height: 4.5rem;
+  width: 4.5rem;
+  // border-radius:100px;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  bottom: 20%;
+  background: $color-black;
+  right: 0rem;
+  display: none;
+  & i{
+    font-size: 2rem;
+    color: $color-grey;
+    background-image: radial-gradient($color-grey,$color-grey-dark-3);
+    background-clip: text;
+
+  }
+}
+.renderAnimation2{
+  animation: renderAnimation2 .3s linear;
+  animation-fill-mode: forwards;
+}
+@keyframes renderAnimation2 {
+  from{
+     transform: rotate(0deg);
+  }to{
+      transform: rotate(-360deg);
+  }
+}

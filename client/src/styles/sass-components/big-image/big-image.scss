@@ -1,0 +1,16 @@
+.carousel{
+  height: 70vh;
+  overflow-x: hidden;
+  &__item{
+    &-img{
+      object-fit: cover;
+      object-position: center;
+      height: 70vh;
+    }
+    &-h3{
+      position: relative;
+      top:-25vh;
+      font-size: 7rem;
+    }
+  }
+}

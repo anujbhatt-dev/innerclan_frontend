@@ -1,0 +1,22 @@
+.feature{
+   display: flex;
+   margin: 5rem 25rem;
+   flex-basis: 25%;
+   perspective: 1000px;
+   // margin-bottom: 50rem;
+   flex-wrap: wrap;
+   justify-content:space-between;
+   @include respond(tab-port){
+     margin: 5rem 5rem;
+   }
+   @include respond(phone){
+     overflow-x: scroll;
+     flex-wrap: nowrap;
+     margin: 5rem 0rem;
+     margin-right: .5rem;
+     margin-left: .5rem;
+     &::-webkit-scrollbar{
+       display: none;
+     }
+   }
+}

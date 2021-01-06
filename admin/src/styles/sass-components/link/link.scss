@@ -1,0 +1,16 @@
+.links{
+   direction: rtl;
+  &__list{
+    display: flex;
+    list-style: none;
+
+    &-item{
+      margin:.5rem 1rem;
+      font-size: 2.5rem;
+      cursor: pointer;
+    }
+    &:last-child{
+      margin-right: .1rem;
+    }
+  }
+}

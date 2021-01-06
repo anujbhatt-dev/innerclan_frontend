@@ -1,0 +1,25 @@
+.designs{
+  display: flex;
+  width: 100%;
+  align-self: flex-start;
+  flex-wrap: wrap;
+  &__box{
+    position: relative;
+    // width: 25rem;
+    padding: 1.5rem;
+    margin: 1.5rem;
+    box-shadow: 1rem 1rem 2rem rgba($color-black,.1), inset 1rem 1rem 2rem rgba($color-black,.1);
+    &--item{
+      // width: 100%;
+      margin-bottom: .5rem
+    }
+    &--image{
+      height: 25rem;
+      width: 25rem;
+      margin: 0 auto;
+    }
+  }
+}
+#delete{
+  right:1rem;
+}

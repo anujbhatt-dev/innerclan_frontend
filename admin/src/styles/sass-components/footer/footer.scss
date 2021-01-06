@@ -1,0 +1,38 @@
+.footer{
+  color: $color-white;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5rem 10rem;
+  background: $color-primary-blue;
+  &__ul{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    flex-grow: 1;
+    list-style: none;
+    &-li{
+      font-size: 7rem;
+      margin-left: 7rem;
+    }
+  }
+  &__copyright{
+    flex-basis: 100%;
+    text-align: center;
+    font-size: 2rem;
+  }
+  @include respond(phone){
+     padding: 2rem 5rem;
+     &__ul{
+
+       &-li{
+         font-size: 3rem;
+         margin-left: 2rem;
+       }
+     }
+     &__image{
+       height: 20rem;
+       width: 20rem;
+     }
+  }
+
+}

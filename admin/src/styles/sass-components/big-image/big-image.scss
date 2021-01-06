@@ -1,0 +1,86 @@
+.bigImage{
+   position: relative;
+   height: 60vh;
+
+
+  &__image{
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    top:0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    animation: move 40s ease-out infinite;
+    animation-fill-mode: forwards;
+  }
+  &__quote{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: $color-white;
+    background: rgba($color-primary-blue,.3);
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    &:hover{
+       background: rgba($color-primary-blue,.3599);
+    }
+    &-span2{
+      align-self: stretch;
+      width: 40%;
+      font-size: 4rem;
+      margin-left: 15rem;
+      transform: rotateY(0deg) rotate(0deg);
+      @include respond(tab-port){
+        width: 50%;
+        margin-left: 5rem;
+        font-size: 3rem;
+      }
+
+    }
+    &-span1{
+      display: none;
+      font-size: 11rem;
+      margin-bottom: 10rem;
+      letter-spacing: 20px;
+      animation: heading 3s ease-out;
+      backface-visibility: hidden;
+      position: relative;
+      @include respond(tab-port){
+        font-size: 5rem;
+        margin-left: 5rem;
+        font-weight: bolder;
+      }
+    }
+  }
+}
+@keyframes heading {
+  0%{
+    left:-30rem
+    // transform: translateY(-20rem);
+  }
+  68%{
+    left:5rem
+    // transform: translateY(3rem);
+  }
+  100%{
+    left:0;
+    // transform: translateY(0rem);
+  }
+
+}
+@keyframes move {
+  0%{
+     object-position: top;
+  }
+  50%{
+     object-position: bottom;
+  }
+  100%{
+     object-position: top;
+  }
+
+}

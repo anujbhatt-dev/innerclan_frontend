@@ -1,0 +1,119 @@
+.addCategory{
+  display: flex;
+  width: 80%;
+  padding: 5rem;
+  justify-content: space-around;
+  &__form{
+     overflow-x: auto;
+     padding: 5rem;
+     background: rgba($color-grey,.1);
+     border-radius: 1rem;
+     box-shadow: 0rem 0rem 2rem rgba($color-black,.3);
+     &--name{
+       background: rgba($color-grey,.2);
+       display: block;
+       height:5rem;
+       width: 30rem;
+       padding: 0 2rem;
+       margin-bottom: 2.5rem;
+       border: none;
+        border-bottom: 2px solid transparent;
+       &:focus{
+         outline: none;
+         border-bottom: 2px solid $color-primary-blue;
+       }
+     }
+     &--select{
+       background: rgba($color-grey,.2);
+       display: block;
+       height:5rem;
+       width: 30rem;
+       padding: 0 2rem;
+       margin-bottom: 2.5rem;
+       border: none;
+        border-bottom: 2px solid transparent;
+       &:focus{
+         outline: none;
+         border-bottom: 2px solid $color-primary-blue;
+       }
+       &-option{
+           border: none;
+           height: 5rem;
+         &:hover{
+           background: rgba($color-primary-blue,.5);
+         }
+       }
+     }
+     &--info{
+       &-parent{
+         position: relative;
+       }
+       &-input{
+         background: rgba($color-grey,.2);
+         display: block;
+         height:5rem;
+         width: 30rem;
+         padding: 0 2rem;
+         padding-right:5rem;
+         margin-bottom: 2.5rem;
+         border: none;
+         border-bottom: 2px solid transparent;
+         &:focus{
+           outline: none;
+           border-bottom: 2px solid $color-primary-blue;
+         }
+
+       }
+       &-adder{
+         padding:  1.6rem;
+         position:absolute;
+         right: 0rem;
+         top:0rem;
+       }
+       &-remover{
+         padding:  1.6rem;
+         position:absolute;
+         right: 0rem;
+         top:0rem;
+       }
+     }
+     &--btn{
+       color: $color-white;
+       background: rgba(#41c66d,1);
+       padding: .5rem 1rem;
+       font-size: 2rem;
+       border: none;
+       border-radius: 8px;
+       border-bottom: 2px solid transparent;
+       &:focus,&:hover{
+         outline: none;
+         border-bottom: 2px solid $color-primary-blue;
+       }
+     }
+  }
+  &__savedCategory{
+    padding: 5rem;
+    background: rgba($color-grey,.002);
+    &--name{
+       padding: 1rem;
+       margin:  .5rem 0;
+    }
+    &--gender{
+       padding: 1rem;
+       margin:  .5rem 0;
+    }
+    &--image{
+       padding: 1rem;
+       margin:  .5rem 0;
+    }
+    &--list{
+      list-style: none;
+       padding: 1rem;
+       margin:  .5rem 0;
+      &-item{
+        font-size: 1.5rem;
+       padding: 1rem;
+      }
+    }
+  }
+}

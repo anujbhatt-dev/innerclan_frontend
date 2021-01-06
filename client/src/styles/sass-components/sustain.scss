@@ -1,0 +1,41 @@
+.sustainibility{
+  position: relative;
+  // background-image:url(../../assets/images/bubble.jpg);
+  // background-repeat: no-repeat;
+  // background-position: top;
+  // background-size: cover;
+  // // opacity: .7;
+  // min-height: 80vh;
+  &__heading{
+    // margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    font-size: 4rem;
+    padding: 3rem;
+    padding-top: 5rem;
+    font-weight: bold;
+    letter-spacing: 5px;
+    color: $color-black;
+    text-transform: uppercase;
+     @include respond(phone){
+       font-size: 3rem;
+       padding: 1rem;
+     }
+  }
+  &__content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 5rem;
+     & span{
+        text-align: center;
+        margin: 1rem 35rem;
+        font-size: 2rem;
+        @include respond(tab-port){
+          margin: 1rem;
+          font-size: 1.5rem;
+        }
+     }
+  }
+}

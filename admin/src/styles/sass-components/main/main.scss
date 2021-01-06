@@ -1,0 +1,13 @@
+.main{
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  padding:1rem;
+  flex-grow: 1;
+  font-size: 2rem;
+  // height: 200vh;
+  // width: 100%;
+  @include respond(phone){
+    margin-top: 5rem;
+  }
+}

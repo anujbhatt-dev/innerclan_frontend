@@ -1,0 +1,16 @@
+.whatsapp{
+  cursor: pointer;
+  z-index: 500;
+  position: fixed;
+  height: 5rem;
+  width: 5rem;
+  border-radius:100px;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  font-size: 2rem;
+  color: $color-white;
+  background: #25D366;
+  top: 88%;
+  left:1%;
+}

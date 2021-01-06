@@ -1,0 +1,29 @@
+.showcase{
+  // background: $color-primary-blue;
+  &__grid{
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     grid-gap: 10rem;
+     padding: 10rem;
+
+    &_img{
+        width: 40vw;
+        margin: auto;
+
+    }
+  }
+  @include respond(tab-port){
+    &__grid{
+       display: grid;
+       grid-template-columns: 1fr 1fr;
+       grid-gap: 2rem;
+       padding: 1rem;
+
+      &_img{
+          width: 45vw;
+          margin: auto;
+
+      }
+    }
+  }
+}

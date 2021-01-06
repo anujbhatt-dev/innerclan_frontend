@@ -1,0 +1,183 @@
+.addProduct{
+  display: flex;
+  width: 80%;
+  padding: 5rem;
+  justify-content: space-around;
+  &__form{
+     padding: 5rem;
+     background: rgba($color-grey,.1);
+     border-radius: 1rem;
+     box-shadow: 0rem 0rem 2rem rgba($color-black,.3);
+     &--image{
+       display: none;
+     }
+     &--imageLabel{
+       display: block;
+       height: 12rem;
+       width: 12rem;
+       margin-bottom: 2.5rem;
+       border-radius: 100px;
+       display: flex;
+       justify-content:center;
+       align-items: center;
+       font-size: 5rem;
+       background: rgba($color-grey,.1);
+       cursor: pointer;
+       &:hover{
+          background: rgba($color-grey,.8);
+       }
+     }
+     &--name{
+       background: rgba($color-grey,.2);
+       display: block;
+       height:5rem;
+       width: 30rem;
+       padding: 0 2rem;
+       margin-bottom: 2.5rem;
+       border: none;
+        border-bottom: 2px solid transparent;
+       &:focus{
+         outline: none;
+         border-bottom: 2px solid $color-primary-blue;
+       }
+     }
+     &--select{
+       background: rgba($color-grey,.2);
+       display: block;
+       height:5rem;
+       width: 30rem;
+       padding: 0 2rem;
+       margin-bottom: 2.5rem;
+       border: none;
+        border-bottom: 2px solid transparent;
+       &:focus{
+         outline: none;
+         border-bottom: 2px solid $color-primary-blue;
+       }
+       &-option{
+           border: none;
+           height: 5rem;
+         &:hover{
+           background: rgba($color-primary-blue,.5);
+         }
+       }
+     }
+     &--info{
+       &-parent{
+         position: relative;
+       }
+       &-input{
+         background: rgba($color-grey,.2);
+         display: block;
+         height:5rem;
+         width: 30rem;
+         padding: 0 2rem;
+         padding-right:4rem;
+         margin-bottom: 2.5rem;
+         border: none;
+         border-bottom: 2px solid transparent;
+         &:focus{
+           outline: none;
+           border-bottom: 2px solid $color-primary-blue;
+         }
+
+       }
+       &-adder{
+         padding:  1.6rem;
+         position:absolute;
+         right: 0rem;
+         top:0rem;
+       }
+       &-remover{
+         padding:  1.6rem;
+         position:absolute;
+         right: 0rem;
+         top:0rem;
+       }
+     }
+     &--btn{
+       color: $color-white;
+       background: rgba(#41c66d,1);
+       padding: .5rem 1rem;
+       font-size: 2rem;
+       border: none;
+       border-radius: 8px;
+       border-bottom: 2px solid transparent;
+       margin-bottom: 5rem;
+       &:focus,&:hover{
+         outline: none;
+         border-bottom: 2px solid $color-primary-blue;
+       }
+     }
+  }
+  &__savedCatagory{
+    padding: 5rem;
+    background: rgba($color-grey,.002);
+    &--name{
+       padding: 1rem;
+       margin:  .5rem 0;
+    }
+    &--gender{
+       padding: 1rem;
+       margin:  .5rem 0;
+    }
+    &--image{
+       padding: 1rem;
+       margin:  .5rem 0;
+    }
+    &--list{
+      list-style: none;
+       padding: 1rem;
+       margin:  .5rem 0;
+      &-item{
+        font-size: 1.5rem;
+       padding: 1rem;
+      }
+    }
+  }
+}
+
+.stage{
+  width:100%;
+  display:flex;
+  @include respond(phone){
+    flex-flow: column;
+    align-items: center;
+  }
+  &__image{
+    height: 40rem;
+    width:30rem;
+    border-radius: 8px;
+    margin-bottom: 2.5rem;
+  }
+  &__2{
+    flex-grow:1;
+    display:flex;
+    padding:.5rem 1rem;
+    flex-wrap:wrap;
+    margin:.1rem;
+    align-items:flex-start;
+    @include respond(phone){
+      flex-flow: column;
+      align-items: center;
+    }
+    &--item{
+       margin:1rem;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//

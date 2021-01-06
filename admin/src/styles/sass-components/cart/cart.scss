@@ -1,0 +1,59 @@
+.cart{
+  position: fixed;
+  z-index: 100;
+  top:17.5%;
+  left:1%;
+  &__label{
+    cursor: pointer;
+    font-size:2rem;
+    z-index: 2100;
+    &:hover{
+      background: rgba($color-grey,.2);
+    }
+  }
+  &__icon{
+    background: $color-white;
+    padding: 2rem;
+    border-radius: 100px;
+    font-size: 2.5rem;
+    color: rgba($color-black,.8);
+    box-shadow: .1rem .2rem 2rem rgba($color-black,.5);
+
+  }
+   &__count{
+      position: absolute;
+      font-size: 1.5rem;
+      background: $color-primary-blue;
+      color: $color-white;
+      padding: 0.7rem 1rem ;
+      border-radius: 50%;
+      right: -.5rem;
+      top:-1rem;
+   }
+
+  &__list{
+
+  }
+  &__component{
+    z-index: 2050;
+     position: fixed;
+     top:16rem;
+     left:2.4rem;
+     opacity: 0;
+     visibility: 0;
+     // height:2rem;
+     // width: 2rem;
+     border-radius: 100px;
+     background: linear-gradient(90deg, rgba(51,152,204,1) 0%, rgba(85,163,189,1) 52%, rgba(51,152,204,1) 100%);
+  }
+  &__checkbox{
+     display: none;
+     &:checked + .cart__component{
+
+     }
+  }
+  @include respond(phone){
+    top:88%;
+    left:80%;
+  }
+}

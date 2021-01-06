@@ -1,0 +1,72 @@
+.card{
+  cursor: pointer;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  margin-bottom: 2rem;
+  width: 25rem;
+  transform: rotate3d(0, 0, 0, 0deg);
+  transition: all .1s;
+  &__image{
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    height: 28rem;
+    width: 25rem;
+  }
+  &__details{
+    text-align: center;
+    margin: 0;
+    // background: $color-primary-blue;
+    justify-content: space-between;
+    color: $color-black;
+    font-size: 1.5rem;
+    &-name{
+      padding: 1rem;
+      font-weight: bold;
+    }
+
+    &-hr{
+      border: none;
+      border-bottom: 1px solid $color-black;
+      width: 0;
+      transition: all .5s;
+      margin: 0 auto;
+    }
+    &-price{
+      padding: .5rem;
+      display: inline-block;
+    }
+    &-cart{
+      display: inline-block;
+      display: none;
+      position: absolute;
+      right: 0;
+      font-size: 4.1rem;
+      padding: .4rem;
+      background: $color-white;
+      color: $color-primary-blue;
+      // height: 100%;
+      &:hover{
+        color: $color-black;
+      }
+    }
+  }
+  &__priceBtn{
+    position: relative;
+    // display: flex;
+    // justify-content: center;
+  }
+  &:hover{
+    box-shadow: 0rem 0rem 2rem rgba($color-black,.5);
+    & > .card__details > .card__details-hr{
+      width: 80%;
+
+    }
+  }
+  @include respond(phone){
+    margin-right:5rem;
+    &__image{
+      height: 23rem;
+      width: 20rem;
+    }
+  }
+}

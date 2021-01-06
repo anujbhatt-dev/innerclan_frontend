@@ -1,0 +1,93 @@
+.nav{
+   z-index: 100;
+   display: flex;
+   background: $color-white;
+   margin-top: 1rem;
+   flex-flow: column;
+  &__list{
+    flex-flow: column;
+    position: relative;
+    flex-grow: 1;
+    display: flex;
+    list-style: none;
+    &--item{
+      cursor: pointer;
+      position: relative;
+      text-align: center;
+      width: 25rem;
+      margin: 1rem 1rem;
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      text-transform: uppercase;
+      border-bottom: 2px solid transparent;
+      background: $color-grey-light-3;
+      &:hover{
+         color: $color-black;
+         background: rgba($color-grey,.09);
+         border-bottom: 2px solid $color-primary-blue;
+      }
+
+      &-modifier{
+        width: 20rem
+      }
+   }
+  }
+  &__image{
+     position: relative;
+     top:0rem;
+     height: 5rem;
+     width: 15rem;
+     margin: 0 auto;
+     cursor: pointer;
+  }
+  @include respond(tab-port){
+    &__list{
+      &--item{
+        margin: 0 1rem;
+        width:12rem;
+        &-modifier{
+          width:18rem;
+        }
+      }
+    }
+    &__image{
+       top:0rem;
+       width: 12rem;
+       height: 4rem;
+    }
+  }
+   @include respond(phone){
+     margin: 0;
+     flex-flow: column;
+     align-items: stretch;
+     flex-wrap: wrap;
+     & > *{
+     height: 6rem;
+     padding: 0;
+     // margin: 0;
+     }
+     &__image{
+        top:0rem;
+       align-self: center;
+       height: 4rem;
+       width:10rem;
+     }
+     &__list{
+       padding: 0;
+       flex-flow:row;
+       margin: 0;
+       flex-wrap: wrap;
+       align-items: flex-start;
+       margin-top: 2rem;
+       &--item{
+         margin: 0;
+         font-weight: bolder;
+         padding: .5rem;
+         width:12rem;
+         &-modifier{
+           width:18rem;
+         }
+       }
+     }
+   }
+}

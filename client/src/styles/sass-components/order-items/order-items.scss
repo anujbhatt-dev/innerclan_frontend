@@ -1,0 +1,38 @@
+.orderItems{
+  // display: inline-block;
+  // flex-wrap: wrap;
+  flex-grow: 1;
+  margin-right: 5rem;
+   &__card{
+      display: flex;
+      // flex-flow: column;
+      margin: 0.5rem 1rem;
+     &--image{
+       height: 12rem;
+       width:10rem;
+       // border-radius: 9px;
+     }
+     &--item{
+       // width:40rem;
+       letter-spacing: 2px;
+       margin: .5rem 1rem;
+       // display: inline-block;
+       font-size: 1rem;
+       font-weight: bolder;
+     }
+     &--items{
+       // margin: .5rem 1rem;
+       // display: flex;
+       // justify-content: space-between;
+     }
+   }
+   @include respond(tab-port){
+
+   }
+}
+.flexer{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}

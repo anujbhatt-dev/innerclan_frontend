@@ -1,0 +1,21 @@
+.noMatch{
+  height: 99vh;
+  display: flex;
+  flex-flow:column;
+  justify-content: center;
+  align-items: center;
+  background: $color-grey-light-3;
+  color:$color-black;
+  &__text{
+    letter-spacing: 2px;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  &__suggestion{
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    font-weight: lighter;
+  }
+}

@@ -1,0 +1,110 @@
+.user{
+  color: $color-black;
+  &__input{
+    padding-left: 1rem;
+    color: $color-black;
+    letter-spacing: 2px;
+    display: block;
+    font-size: 1.2rem;
+    border: none;
+    height: 3rem;
+    width: 30rem;
+    margin-bottom: 1rem;
+    background-image: linear-gradient(to bottom,transparent 0%,transparent 95%,$color-primary-blue 5%);
+    &::placeholder{
+      color:$color-black;
+    }
+    &:focus{
+      outline: none;
+    }
+  }
+  &__register{
+    // border-bottom-right-radius:18px;
+    // border-bottom-left-radius: 18px;
+    letter-spacing: 2px;
+    border: 1px solid $color-black;
+    margin-bottom: 1rem;
+    padding: 2rem;
+    background: rgba($color-white,1);
+    & h3{
+      margin-bottom: 1rem;
+    }
+    &--btn{
+      // letter-spacing: 2px;
+      cursor: pointer;
+      width:10rem;
+      height: 3rem;
+      border: none;
+      background: $color-Spring-green;
+      &:focus{
+        outline: none;
+      }
+    }
+  }
+  &__login{
+    background: rgba($color-white,1);
+    padding: 2rem;
+    border: 1px solid $color-black;
+    margin-bottom: 1rem;
+    position: relative;
+    & h3{
+      margin-bottom: 1rem;
+    }
+    &--btn{
+      background: $color-primary-blue;
+      cursor: pointer;
+      // letter-spacing: 2px;
+      width:10rem;
+      height: 3rem;
+      border: none;
+      &:focus{
+        outline: none;
+      }
+    }
+    &--forgotPassword{
+      color: $color-primary-blue;
+      font-size: 1rem;
+      cursor: pointer;
+      position:absolute;
+      right:1rem;
+      bottom: 1rem;
+
+    }
+  }
+  & hr{
+    border: none;
+    border-bottom: 3px dotted  rgba($color-white,.9);
+    margin: 1rem auto;
+    width: 10%;
+
+  }
+  &__google{
+    // border-top-left-radius: 18px;
+    // border-top-right-radius:18px;
+    letter-spacing: 1px;
+    text-align: center;
+    display: inline-block;
+    padding: 1rem;
+    font-size: 1.5rem;
+    margin: 1rem auto;
+    cursor: pointer;
+    width: 100%;
+    height: 4rem;
+    background: $color-red;
+    color: $color-white;
+    transition: all .3s;
+    border: none;
+    text-decoration: none;
+
+    &:hover{
+      background: $color-white;
+      color: $color-black;
+    }
+    &:focus{
+      outline: none;
+    }
+  }
+  &__nodal{
+    background: $color-black;
+  }
+}

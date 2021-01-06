@@ -1,0 +1,44 @@
+.modal{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position:fixed;
+  transform: translate(-50%,-50%);
+  background: linear-gradient(90deg, rgba(237,233,233,1) 0%, rgba(255,255,255,1) 50%, rgba(237,233,233,1) 100%);
+  width:85%;
+  height:90%;
+  z-index: 500;
+  top:50%;
+  left: 50%;
+  font-size: 2rem;
+  animation: modal .3s ease-out;
+  border-radius: 8px;
+}
+@keyframes modal {
+    0%{
+      top:-10%;
+      opacity: 0.5;
+    }
+    100%{
+      top:50%;
+      opacity: 1;
+    }
+}
+.modalCross{
+  position: absolute;
+  font-size: 2.5rem;
+  font-weight: bolder;
+  background:$color-white;
+  bottom: 1rem;
+  right:1rem;
+  padding: 1rem 1.3rem;
+  box-shadow: 0 0 1rem $color-black;
+  border-radius: 50%;
+  transition: all .2s;
+  &:hover,&:active{
+    border-bottom: 20px solid $color-primary-blue;
+    background: $color-black;
+    color: $color-white;
+    box-shadow: 0 0 0rem $color-black;
+  }
+}

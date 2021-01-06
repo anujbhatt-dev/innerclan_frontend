@@ -1,0 +1,79 @@
+.checkout{
+  width: 100%;
+  align-self: flex-start;
+  overflow-y: auto;
+  height: 100%;
+  &__box{
+    align-items:flex-start;
+    display: flex;
+    margin: 2rem;
+    border-radius: 8px;
+    border: 2px solid $color-black;
+    margin-bottom: 1rem;
+    &--item{
+     padding: 1rem 2rem;
+     margin: 1rem;
+    }
+    &--col1{
+      flex-grow: 1;
+    }
+    &--col2{
+      display: flex;
+    }
+    &--quantity{
+      & > *{
+        margin: 0 1rem;
+      }
+      & span{
+        cursor: pointer;
+        padding: 0 .3rem;
+        transition: all .1s;
+        &:hover{
+          background: rgba($color-black,.1);
+        }
+      }
+    }
+    &--remove{
+      cursor: pointer;
+      color: $color-red;
+      padding: .5rem 1rem;
+      display: inline-block;
+    }
+    &--img{
+      height: 20rem;
+      width: 15rem;
+    }
+  }
+  &__box2{
+    display: flex;
+    margin: 2rem;
+    border-radius: 8px;
+    // border: 2px solid $color-black;
+    margin-bottom: 1rem;
+    flex-flow: column;
+    align-items: flex-end;
+    &--h5{
+      display: block;
+      text-align:right;
+      padding: 1rem 2rem;
+    }
+    &--checkout{
+     padding: 1rem 2rem;
+    }
+  }
+
+}
+@include respond(tab-port){
+    .modalCart{
+      &__box{
+        flex-flow: column;
+        &--item{
+         padding: .5rem 2rem;
+         margin: 1rem;
+        }
+      }
+    }
+}
+@include respond(phone){
+
+}
