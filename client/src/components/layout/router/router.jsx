@@ -7,12 +7,11 @@ import {NavLink} from "react-router-dom"
 
       return (
          <div className="routes">
-             <NavLink activeStyle={{color:"#80ea6e"}} exact to="/" className="routes__route">home</NavLink>
+             <NavLink activeStyle={{color:"#80ea6e"}} exact to="/" className="routes__route">home</NavLink>             
              <NavLink activeStyle={{color:"#80ea6e"}} exact to="/sustainibility" className="routes__route">sustainibility</NavLink>
              <NavLink activeStyle={{color:"#80ea6e"}} exact to="/customise" className="routes__route">customise</NavLink>
              <NavLink activeStyle={{color:"#80ea6e"}} exact to="/aboutUs" className="routes__route">about us</NavLink>
              <NavLink activeStyle={{color:"#80ea6e"}} exact to="/showcase" className="routes__route">Showcase</NavLink>
-             <NavLink activeStyle={{color:"#80ea6e"}} exact to="/collection" className="routes__route">collection</NavLink>
              <span style={{zIndex:"500"}} data-aos-once="true" data-aos="fade-down" className="nav__list--item">contact us
              <span   className="dropdown">
                  <span style={{width:"18rem"}} className="dropdown__item">gmail@gmail.com</span>

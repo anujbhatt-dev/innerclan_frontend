@@ -103,7 +103,7 @@ import 'react-toastify/dist/ReactToastify.css';
               {men}
               {women}
               {others}
-
+              <div style={{cursor:"pointer"}} className="routes__route" onClick={()=>document.getElementById("heading").scrollIntoView()}>collection</div>
           </div>
           <div className="search">
              <input className="search__checkbox" id="searchCheck" type="checkbox"/>
