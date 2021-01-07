@@ -46,7 +46,7 @@ import 'react-toastify/dist/ReactToastify.css';
    componentDidMount=()=>{
      let formDetails=null
      let gt = this.props.cart.map(product=>(product.quantity*product.productPrice)).reduce((acc,value)=>acc+value)
-     this.setState({gTotal:gt,orders:[...this.props.cart],finalAmount:gt+Math.round(gt*18/100)})
+     this.setState({gTotal:gt,orders:[...this.props.cart],finalAmount:gt})
      axios.get("/v1/order/getAddress").then(res=>{
 
       formDetails={
@@ -182,10 +182,10 @@ import 'react-toastify/dist/ReactToastify.css';
              <div><span className="checkout__h5Desktop--tax"><strong style={{color:"black",fontWeight:"bolder"}}>Subtotal</strong></span><span className="checkout__h5Desktop--tax"><strong style={{color:"black",fontWeight:"bolder"}}>₹{this.state.gTotal}</strong></span></div><br/>
              <hr className="checkout__hr" style={{margin:".2rem",width:"100%"}}/>
              <div><span className="checkout__h5Desktop--tax">Shipping</span><span className="checkout__h5Desktop--tax">free</span></div><br/>
-             <div><span className="checkout__h5Desktop--tax">Tax(18%)</span><span className="checkout__h5Desktop--tax" style={{color:"black",fontWeight:"bolder"}}>₹{Math.round(this.state.gTotal*18/100)}</span></div><br/>
+             <div><span className="checkout__h5Desktop--tax">Inclusive of all taxes</span></div><br/>
              {this.state.couponDetails.value!=="-1"?<><div><span className="checkout__h5Desktop--tax">Discount</span><span className="checkout__h5Desktop--tax" style={{color:"black",fontWeight:"bolder"}}>₹{this.state.couponDetails.value}</span></div><br/></>:null}
              <hr className="checkout__hr" style={{margin:".2rem",width:"100%"}}/>
-             Grand Total {" "} <span style={{color:"black",fontWeight:"bolder"}}> ₹{(this.state.gTotal+Math.round(this.state.gTotal*18/100)===this.state.finalAmount && this.state.couponDetails.value==="-1")?this.state.finalAmount:<span>{this.state.finalAmount} <br/> (coupon applied)</span>}</span></h5>
+             Grand Total {" "} <span style={{color:"black",fontWeight:"bolder"}}> ₹{(this.state.gTotal===this.state.finalAmount && this.state.couponDetails.value==="-1")?this.state.finalAmount:<span>{this.state.finalAmount} <br/> (coupon applied)</span>}</span></h5>
              <div className="checkout__product">
               {this.state.orders.length?this.state.orders.map((product,i)=>(
                 <div className="checkout__product--box">
@@ -213,10 +213,10 @@ import 'react-toastify/dist/ReactToastify.css';
               <div><span className="checkout__h5Desktop--tax"><strong style={{color:"black",fontWeight:"bolder"}}>Subtotal</strong></span><span className="checkout__h5Desktop--tax"><strong style={{color:"black",fontWeight:"bolder"}}>₹{this.state.gTotal}</strong></span></div><br/>
               <hr className="checkout__hr" style={{margin:".2rem",width:"100%"}}/>
               <div><span className="checkout__h5Desktop--tax">Shipping</span><span className="checkout__h5Desktop--tax">free</span></div><br/>
-              <div><span className="checkout__h5Desktop--tax">Tax(18%)</span><span className="checkout__h5Desktop--tax" style={{color:"black",fontWeight:"bolder"}}>₹{Math.round(this.state.gTotal*18/100)}</span></div><br/>
+              <div><span className="checkout__h5Desktop--tax">Inclusive of all taxes</span></div><br/>
               {this.state.couponDetails.value!=="-1"?<><div><span className="checkout__h5Desktop--tax">Discount</span><span className="checkout__h5Desktop--tax" style={{color:"black",fontWeight:"bolder"}}>₹{this.state.couponDetails.value}</span></div><br/></>:null}
               <hr className="checkout__hr" style={{margin:".2rem",width:"100%"}}/>
-              Grand Total {" "} <span style={{color:"black",fontWeight:"bolder"}}> ₹{(this.state.gTotal+Math.round(this.state.gTotal*18/100)===this.state.finalAmount && this.state.couponDetails.value==="-1")?this.state.finalAmount:<span>{this.state.finalAmount} <br/> (coupon applied)</span>}</span></h5>
+              Grand Total {" "} <span style={{color:"black",fontWeight:"bolder"}}> ₹{(this.state.gTotal===this.state.finalAmount && this.state.couponDetails.value==="-1")?this.state.finalAmount:<span>{this.state.finalAmount} <br/> (coupon applied)</span>}</span></h5>
             </div>
         </div>
      )
